@@ -1,14 +1,22 @@
 import React from 'react'
-import { View, Text, StyleSheet } from 'react-native';
+import { View, Text, TextInput, StyleSheet } from 'react-native';
 
-const SignInputBox = () => {
+const SignInputBox = ({ placeholder }) => {
   return (
     <>
     <View>
-      <Text>Hello</Text>
+      <TextInput 
+      placeholder={placeholder}
+      placeholderTextColor='#999'
+      style={{backgroundColor: "white", width: 327, height: 52, borderRadius: 10, padding: 10, borderWidth: 1, margin: 12, borderColor: '#AFB0B6',}}
+      />
     </View>
     </>
   )
 }
+
+const styles =StyleSheet.create({
+
+})
 
 export default SignInputBox
