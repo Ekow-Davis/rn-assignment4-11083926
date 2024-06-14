@@ -1,8 +1,8 @@
 import { StatusBar } from 'expo-status-bar';
 import FeaturedJobCard from './Components/FeaturedJobCard';
-import { SafeAreaView, ScrollView, StyleSheet, Text, View } from 'react-native';
+import {Image, SafeAreaView, ScrollView, StyleSheet, Text, View } from 'react-native';
 
-const FeaturedJobBackgroundImage = require("./assets/Images/Random_Squigles-removebg-preview.png")
+const appleImage = require("./assets/Images/apple.png")
 
 const App = () => {
 
@@ -20,9 +20,9 @@ const App = () => {
     </View>
 
     <FeaturedJobCard 
-    bgColour="#E23d"
+    bgColour="#e5d2"
     label="Label"
-    
+    imageUrl={appleImage}
     miniLabel="miniLabel"
     price="price"
     location="location"
