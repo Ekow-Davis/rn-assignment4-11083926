@@ -1,13 +1,12 @@
 import { StatusBar } from 'expo-status-bar';
 import { useState } from 'react';
+import PopularJobCard from './Components/PopularJobCard';
 import SignInputBox from './Components/SignInputBox';
 import FeaturedJobCard from './Components/FeaturedJobCard';
 import {Pressable, TouchableOpacity, SafeAreaView, ScrollView, StyleSheet, Text, View } from 'react-native';
 
 const appleImage = require("./assets/Images/apple.png")
-
-
-
+const ProfileImage = require("./assets/Images/Profile.png")
 
 
 const App = () => {
@@ -27,7 +26,8 @@ const App = () => {
       <Text>Hi</Text>
     </View>
 
-    <FeaturedJobCard 
+    <FeaturedJobCard
+    textColour="red" 
     bgColour="#e5d2"
     label="Label"
     imageUrl={appleImage}
@@ -57,11 +57,19 @@ const App = () => {
       onPress={() => console.log('Pressable')}
       onPressIn={() => setIsPressed(true)} 
       onPressOut={( ) => setIsPressed(false)}
-      style={[{margin: 10, marginHorizontal: 20, alignItems: 'center', justifyContent: 'center', padding: 10,  backgroundColor: '#356899',}, isPressed && styles.pressed]}>
-        
+      style={[{margin: 10, marginHorizontal: 20, alignItems: 'center', borderRadius: 5, justifyContent: 'center', padding: 10,  backgroundColor: '#356899',}, isPressed && styles.pressed]}>
+
         <Text style={{color: "white", fontSize: 14, letterSpacing: 0.5,}}>Log In</Text>
       </Pressable>
     </TouchableOpacity>
+
+    <PopularJobCard
+    imageUrl={ProfileImage} 
+    label="label"
+    miniLabel="miniLabel"
+    location="location"
+    pay="pay"
+    />
       
     
     </ScrollView>

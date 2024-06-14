@@ -1,7 +1,7 @@
 import React from 'react'
 import { Image, View, Text, StyleSheet } from 'react-native';
 
-const FeaturedJobCard = ({ imageUrl, imageAlt, bgColour, label, miniLabel, location, price, }) => {
+const FeaturedJobCard = ({ imageUrl, textColour, imageAlt, bgColour, label, miniLabel, location, price, }) => {
   return (
     <>
     <View style={[styles.container, {backgroundColor: bgColour}]}>
@@ -9,10 +9,10 @@ const FeaturedJobCard = ({ imageUrl, imageAlt, bgColour, label, miniLabel, locat
         source={imageUrl} 
         alt={imageAlt} 
         style={styles.logo} />
-        <Text style={styles.label}>{label}</Text>        
-        <Text style={styles.miniLabel}>{miniLabel}</Text>
-        <Text style={styles.location}>{location}</Text>
-        <Text style={styles.price}>{price}</Text>
+        <Text style={[styles.label, {color: textColour}]}>{label}</Text>        
+        <Text style={[styles.miniLabel, {color: textColour}]}>{miniLabel}</Text>
+        <Text style={[styles.location, {color: textColour}]}>{location}</Text>
+        <Text style={[styles.price, {color: textColour}]}>{price}</Text>
         
     </View>
     </>
@@ -27,6 +27,7 @@ const styles = StyleSheet.create({
       borderRadius: 24, 
       margin: 15,         
       overflow: 'hidden',
+      
     },
   
     label: {
@@ -38,20 +39,19 @@ const styles = StyleSheet.create({
       paddingVertical: 2,
       borderRadius: 3,
       fontSize: 14,
-      fontWeight: 'bold',
-      color: '#333',
+      fontWeight: 'bold',      
     },
 
     price: {
       position: 'absolute',
       left: 20,
-      bottom: 30,
+      bottom: 30,      
     },
 
     location: {
       position: 'absolute',
       right: 30,
-      bottom: 30,
+      bottom: 30,      
     },
 
     miniLabel: {
