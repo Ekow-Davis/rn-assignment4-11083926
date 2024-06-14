@@ -1,17 +1,18 @@
 import React from 'react'
-import { View, Text, StyleSheet } from 'react-native';
+import { Image, View, Text, StyleSheet } from 'react-native';
 
-const FeaturedJobCard = ({ imgUrl, bgColour, label, miniLabel, location, price, underLabel }) => {
+const FeaturedJobCard = ({ imageUrl, bgColour, label, miniLabel, location, price, underLabel }) => {
   return (
+    <>
     <View style={[styles.container, {backgroundColor: bgColour}]}>
-        <Image source={{uri: imgUrl}} style={styles.image}/>
-        <Text style={styles.label}>{label}</Text>
-        <Text>{underLabel}</Text>
-        <Text>{miniLabel}</Text>
-        <Text>{location}</Text>
-        <Text>{price}</Text>
+        
+        <Text style={styles.label}>{label}</Text>        
+        <Text style={styles.miniLabel}>{miniLabel}</Text>
+        <Text style={styles.location}>{location}</Text>
+        <Text style={styles.price}>{price}</Text>
         
     </View>
+    </>
   )
 }
 
@@ -19,7 +20,7 @@ const styles = StyleSheet.create({
     container: {
       width: 280,  
       height: 186, 
-      marginVertical: 10,      
+      marginVertical: 1,      
       borderRadius: 24, 
       margin: 8,
       marginLeft: 10,
@@ -29,7 +30,7 @@ const styles = StyleSheet.create({
     },
   
     label: {
-      position: 'absolute',
+      position: 'relative',
       top: 50,
       left: 10,
       paddingHorizontal: 5,
@@ -38,8 +39,33 @@ const styles = StyleSheet.create({
       fontSize: 14,
       fontWeight: 'bold',
       color: '#333',
+    },
+
+    price: {
+      position: 'absolute',
+      left: 20,
+      bottom: 20,
+    },
+
+    location: {
+      position: 'absolute',
+      right: 20,
+      bottom: 20,
+    },
+
+    miniLabel: {
+      position: 'relative',
+      right: 1,
+      bottom: 30,
     }
 
+    /*
+    backgroundImage: {        
+    ...StyleSheet.absoluteFillObject, 
+    resizeMode: 'cover', 
+    opacity: 0.5, 
+    },
+    */
 });
 
 export default FeaturedJobCard;

@@ -2,7 +2,10 @@ import { StatusBar } from 'expo-status-bar';
 import FeaturedJobCard from './Components/FeaturedJobCard';
 import { SafeAreaView, ScrollView, StyleSheet, Text, View } from 'react-native';
 
-export default function App() {
+const FeaturedJobBackgroundImage = require("./assets/Images/Random_Squigles-removebg-preview.png")
+
+const App = () => {
+
   return (
     <>
     <SafeAreaView style={{flex: 1,}}>
@@ -17,8 +20,13 @@ export default function App() {
     </View>
 
     <FeaturedJobCard 
-    bgColour="#E23d6"
-    label="Hello"
+    bgColour="#E23d"
+    label="Label"
+    
+    miniLabel="miniLabel"
+    price="price"
+    location="location"
+    
     />
 
     <View>
@@ -43,3 +51,6 @@ const styles = StyleSheet.create({
     backgroundColor: '#fff',
   },
 });
+
+
+export default App
