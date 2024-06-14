@@ -21,11 +21,11 @@ const LogInPage = () => {
 {/*Code body*/}
     <View style={{marginBottom: 10, marginTop: 30,}}>
       <View>
-			<Text style={{fontSize: 20, margin: 14, fontWeight: 'bold',}} >Jobizz</Text>
+			<Text style={{marginLeft:16, fontSize: 32, margin: 10, fontWeight: 'bold', color: '#356899'}} >Jobizz</Text>
 
-				<Text style={{ fontSize: 14, }}>Welcome Back</Text>
+				<Text style={{ marginLeft:16, fontSize: 33, fontWeight: 'bold', color: '#0D0D26'}}>Welcome Back</Text>
 
-				<Text style={{}}> Let’s log in. Apply to jobs!</Text>
+				<Text style={{ marginLeft:16, margin: 4, marginBottom: 46, fontSize: 18, opacity: 0.5, color: '#0D0D26' }}> Let’s log in. Apply to jobs!</Text>
 			</View>
 
 			<View>
@@ -58,19 +58,21 @@ const LogInPage = () => {
 			</View>
 
 			<View styles={{flexDirection: 'row', alignItems: 'center', marginVertical: 10,}}>
-				<View style={{flex: 1, height: 1, backgroundColor: '#ccc',}}/>
-				<Text> Or Continue with</Text>
-				<View style={{flex: 1, height: 1, backgroundColor: '#ccc',}}/>
+				<View style={{flex: 1, width: 100, top: 31, marginLeft:30, height: 1, backgroundColor: '#ccc',}}/>
+				<Text style={{textAlign: 'center', marginHorizontal: 10, marginTop: 20, marginBottom: 20,}}> Or Continue with</Text>
+				<View style={{flex: 1, height: 1, left: 260, top: -28, width: 100, backgroundColor: '#ccc',}}/>
 			</View>
 			
 
 			<View style={{ flexDirection: 'row', alignItems: 'center', justifyContent: 'center',}}>
 
-				<Image source={appleImage} style={{height: 30, width: 30, margin: 15, backgroundColor: 'red' }} />
-				<Image source={googleImage} style={{height: 30, width: 30, margin: 15, backgroundColor: 'red' }} />
-				<Image source={facebookImage} style={{height: 30, width: 30, margin: 15, backgroundColor: 'red' }} />
+				<Image source={appleImage} style={{height: 30, width: 30, margin: 15, backgroundColor: '#ffffff', borderRadius: 20 }} />
+				<Image source={googleImage} style={{height: 30, width: 30, margin: 15, backgroundColor: '#ffffff', borderRadius: 20 }} />
+				<Image source={facebookImage} style={{height: 30, width: 30, margin: 15, backgroundColor: '#ffffff', borderRadius: 20 }} />
 
 			</View>
+
+			<Text style={{ marginTop: 80, color: '#ccc', textAlign: 'center',}}>Haven’t an account? Register</Text>
 
     </View>
 {/*Code body*/}
@@ -84,7 +86,7 @@ const LogInPage = () => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fffff',
+    backgroundColor: '#FAFAFE',
   },
 
   pressed: {

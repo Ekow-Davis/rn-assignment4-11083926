@@ -17,9 +17,6 @@ const App = () => {
 {/*Code body*/}
   <View style={{marginBottom: 20, marginTop: 60,}}>
     
-    <View>
-      <Text>Hi</Text>
-    </View>
 
     <LogInPage />
 
@@ -40,7 +37,7 @@ const App = () => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fffff',
+    backgroundColor: '#fafafd',
   },
 
   pressed: {
