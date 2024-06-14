@@ -3,7 +3,7 @@ import { useState } from 'react';
 import PopularJobCard from './Components/PopularJobCard';
 import SignInputBox from './Components/SignInputBox';
 import FeaturedJobCard from './Components/FeaturedJobCard';
-import {Pressable, TouchableOpacity, SafeAreaView, ScrollView, StyleSheet, Text, View } from 'react-native';
+import {TextInput, Pressable, TouchableOpacity, SafeAreaView, ScrollView, StyleSheet, Text, View } from 'react-native';
 
 const appleImage = require("./assets/Images/apple.png")
 const ProfileImage = require("./assets/Images/Profile.png")
@@ -12,6 +12,8 @@ const ProfileImage = require("./assets/Images/Profile.png")
 const App = () => {
 
   const [isPressed, setIsPressed] = useState(false)
+
+  const [name, setName] =useState('')
 
   return (
     <>
@@ -40,9 +42,6 @@ const App = () => {
     placeholder="Name"
     />
 
-    <View>
-      <Text>Hello</Text>
-    </View>
 
   </View>
 
