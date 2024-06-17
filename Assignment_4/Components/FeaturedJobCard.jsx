@@ -32,8 +32,8 @@ const styles = StyleSheet.create({
   
     label: {
       position: 'absolute',
-      top: 20,
-      left: 50,
+      top: 18,
+      left: 60,
       marginLeft: 10,
       paddingHorizontal: 5,
       paddingVertical: 2,
@@ -56,18 +56,20 @@ const styles = StyleSheet.create({
 
     miniLabel: {
       position: 'relative',
-      left: 50,
-      top: 3,
+      left: 64,
+      top: 4,
+      fontWeight: 'ultralight',
       marginLeft: 10,
     },
 
     logo: {
       position: 'relative',
-      top: 20,
+      top: 22,
       left: 20,
       width: 35,
       height: 35,
       padding: 15,
+      paddingBottom: 20,
       borderRadius: 15,
       backgroundColor: 'white',
       resizeMode: 'cover',

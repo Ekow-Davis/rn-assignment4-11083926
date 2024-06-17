@@ -12,7 +12,11 @@ const facebookImage = require("../assets/Images/facebook.png")
 
 const LogInPage = ( { navigation }) => {
 
+	const [name, setName] = useState('');
+  	const [email, setEmail] = useState('');
 	const [isPressed, setIsPressed] = useState(false)
+
+	const isButtonDisabled = !name || !email;
 
   return (
     <>
@@ -34,10 +38,14 @@ const LogInPage = ( { navigation }) => {
 
 			<SignInputBox 
     		placeholder="Name"
+			onInputChange={setName}
+			required={true}
     	/>
 
 			<SignInputBox 
-				placeholder="Email"
+			placeholder="Email"
+			onInputChange={setEmail}
+			required={true}
 			/>
 
 			<TouchableOpacity
@@ -45,13 +53,19 @@ const LogInPage = ( { navigation }) => {
     		style={[styles.touchableOpacity, isPressed && styles.pressed]} 
 				onPressIn={() => setIsPressed(true)} 
 				onPressOut={( ) => setIsPressed(false)}
-				onPress={() => console.log('TouchableOpacity')}>
+				
+				>
 
       <Pressable
-	  			onPress={() => navigation.navigate('Homepage')}				
+	  			onPress={() => {
+					if (!isButtonDisabled) {
+					  navigation.navigate('Homepage', { name, email });
+					}
+				  }}
+				  disabled={isButtonDisabled}			
 				onPressIn={() => setIsPressed(true)} 
 				onPressOut={( ) => setIsPressed(false)}
-				style={[{margin: 10, marginHorizontal: 20, alignItems: 'center', borderRadius: 5, justifyContent: 'center', padding: 10,  backgroundColor: '#356899',}, isPressed && styles.pressed]}>
+				style={[{margin: 10, marginHorizontal: 20, alignItems: 'center', borderRadius: 5, justifyContent: 'center', padding: 10,  backgroundColor: '#356899',}, isPressed && styles.pressed, isButtonDisabled && styles.disabled]}>
 
         <Text style={{color: "white", fontSize: 14, letterSpacing: 0.5,}}>Log In</Text>
       </Pressable>
@@ -93,6 +107,10 @@ const styles = StyleSheet.create({
 
   pressed: {
     opacity: 0.5,
+  },
+
+  disabled: {
+    backgroundColor: '#B0B0B0',
   },
 
 });
