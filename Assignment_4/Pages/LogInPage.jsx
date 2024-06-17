@@ -1,6 +1,8 @@
 import React from 'react'
 import { StatusBar } from 'expo-status-bar';
 import { useState } from 'react';
+import { NavigationContainer } from '@react-navigation/native';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import SignInputBox from '../Components/SignInputBox';
 import { ScrollView, SafeAreaView, View, TouchableOpacity , Pressable, Text, TextInput, StyleSheet, Image } from 'react-native';
 
@@ -8,7 +10,7 @@ const appleImage = require("../assets/Images/apple.png")
 const googleImage = require("../assets/Images/google.png")
 const facebookImage = require("../assets/Images/facebook.png")
 
-const LogInPage = () => {
+const LogInPage = ( { navigation }) => {
 
 	const [isPressed, setIsPressed] = useState(false)
 
@@ -45,8 +47,8 @@ const LogInPage = () => {
 				onPressOut={( ) => setIsPressed(false)}
 				onPress={() => console.log('TouchableOpacity')}>
 
-      <Pressable 
-				onPress={() => console.log('Pressable')}
+      <Pressable
+	  			onPress={() => navigation.navigate('Homepage')}				
 				onPressIn={() => setIsPressed(true)} 
 				onPressOut={( ) => setIsPressed(false)}
 				style={[{margin: 10, marginHorizontal: 20, alignItems: 'center', borderRadius: 5, justifyContent: 'center', padding: 10,  backgroundColor: '#356899',}, isPressed && styles.pressed]}>

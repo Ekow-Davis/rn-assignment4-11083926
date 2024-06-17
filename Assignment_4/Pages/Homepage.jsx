@@ -1,10 +1,20 @@
 import React from 'react'
+import { useState } from 'react';
+import { StatusBar } from 'expo-status-bar';
 import SignInputBox from '../Components/SignInputBox';
-import { TouchableOpacity , PressableView, Text, TextInput, StyleSheet, Image } from 'react-native';
+import { ScrollView, TouchableOpacity, SafeAreaView, View, Pressable, Text, TextInput, StyleSheet, Image } from 'react-native';
+
+
+const appleImage = require("../assets/Images/apple.png")
+const googleImage = require("../assets/Images/google.png")
+const facebookImage = require("../assets/Images/facebook.png")
+
 
 
 
 const Homepage = () => {
+
+	const [isPressed, setIsPressed] = useState(false)
 
   return (
     <>
@@ -69,5 +79,17 @@ const Homepage = () => {
     </>
   )
 }
+
+const styles = StyleSheet.create({
+	container: {
+	  flex: 1,
+	  backgroundColor: '#FAFAFE',
+	},
+  
+	pressed: {
+	  opacity: 0.5,
+	},
+  
+  });
 
 export default Homepage

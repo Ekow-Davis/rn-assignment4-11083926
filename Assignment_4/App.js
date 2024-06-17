@@ -1,34 +1,22 @@
-import { StatusBar } from 'expo-status-bar';
-import { useState } from 'react';
 import LogInPage from './Pages/LogInPage';
-import {TextInput, Pressable, TouchableOpacity, SafeAreaView, ScrollView, StyleSheet, Text, View } from 'react-native';
+import Homepage from './Pages/Homepage'
+import { StyleSheet, Text, View } from 'react-native';
+import { NavigationContainer } from '@react-navigation/native';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
+
+const Stack = createNativeStackNavigator()
 
 const App = () => {
 
-  
-
   return (
     <>
-    <SafeAreaView style={{flex: 1,}}>
-    <View style={styles.container}>
-    <StatusBar style="auto"/>
-    <ScrollView>
-{/*Code body*/}
-  <View style={{marginBottom: 20, marginTop: 60,}}>
-    
-
-    <LogInPage />
-
-    
-  </View>
-
-  
-    
-    </ScrollView>
-    </View>
-    </SafeAreaView>
-    
+    <NavigationContainer>
+      <Stack.Navigator>        
+        <Stack.Screen name="LogInPage" component={LogInPage} />
+        <Stack.Screen name="Homepage" component={Homepage} />
+      </Stack.Navigator>
+    </NavigationContainer>
     
     </>
   );
