@@ -10,24 +10,24 @@ const Profile = require("../assets/Images/Profile.png")
 
 const horizontalData = [
 	{ key: '1', imageUrl: require("../assets/Images/apple.png"), imageAlt: "appleImage", location: "Accra,Ghana", price: "$3,000/mth", label: "Software Engineering", miniLabel: "Apple", bgColour: "black", textColour: "white", },
-	{ key: '2', imageUrl: require("../assets/Images/google.png"), imageAlt: "googleImage", location: "Accra,Ghana", price: "$3,000/mth", label: "Software Engineering", miniLabel: "Google", bgColour: "white", textColour: "black", },
+	{ key: '2', imageUrl: require("../assets/Images/google.png"), imageAlt: "googleImage", location: "Accra,Ghana", price: "$3,000/mth", label: "Data scientist", miniLabel: "Google", bgColour: "white", textColour: "black", },
 	{ key: '3', imageUrl: require("../assets/Images/facebook.png"), imageAlt: "facebookImage", location: "Accra,Ghana", price: "$3,000/mth", label: "Software Engineering", miniLabel: "Facebook", bgColour: "blue", textColour: "white", },
-	{ key: '4', imageUrl: require("../assets/Images/burgerKing.png"), imageAlt: "burgerKing", location: "Accra,Ghana", price: "$3,000/mth", label: "Software Engineering", miniLabel: "Burger King", bgColour: "yellow", textColour: "black", },
-	{ key: '5', imageUrl: require("../assets/Images/beats.png"), imageAlt: "beatsImage", location: "Accra,Ghana", price: "$3,000/mth", label: "Software Engineering", miniLabel: "Beats", bgColour: "white", textColour: "red", },
-	{ key: '6', imageUrl: require("../assets/Images/apple.png"), imageAlt: "appleImage", location: "Accra,Ghana", price: "$3,000/mth", label: "Software Engineering", miniLabel: "Apple", bgColour: "black", textColour: "white", },
-	{ key: '7', imageUrl: require("../assets/Images/google.png"), imageAlt: "googleImage", location: "Accra,Ghana", price: "$3,000/mth", label: "Software Engineering", miniLabel: "Google", bgColour: "white", textColour: "black", },
+	{ key: '4', imageUrl: require("../assets/Images/burgerKing.png"), imageAlt: "burgerKing", location: "Accra,Ghana", price: "$3,000/mth", label: "Branch Manager", miniLabel: "Burger King", bgColour: "yellow", textColour: "black", },
+	{ key: '5', imageUrl: require("../assets/Images/beats.png"), imageAlt: "beatsImage", location: "Accra,Ghana", price: "$3,000/mth", label: "Audio Engineering", miniLabel: "Beats", bgColour: "white", textColour: "red", },
+	{ key: '6', imageUrl: require("../assets/Images/starbucks.png"), imageAlt: "starbucksImage", location: "Accra,Ghana", price: "$3,000/mth", label: "Drink Barista", miniLabel: "Starbucks", bgColour: "teal", textColour: "white", },
+	{ key: '7', imageUrl: require("../assets/Images/shell.png"), imageAlt: "shellImage", location: "Accra,Ghana", price: "$3,000/mth", label: "Petroleum Engineering", miniLabel: "Shell", bgColour: "yellow", textColour: "red", },
 	{ key: '8', imageUrl: require("../assets/Images/facebook.png"), imageAlt: "facebookImage", location: "Accra,Ghana", price: "$3,000/mth", label: "Software Engineering", miniLabel: "Facebook", bgColour: "blue", textColour: "white", },
   ];
 
   const verticalData = [
-	{ key: '1', imageUrl: require("../assets/Images/burgerKing.png"), location: "Accra,Ghana", pay: "$3,000/mth", label: "Software Engineering", miniLabel: "Burger King", },
-	{ key: '2', imageUrl: require("../assets/Images/beats.png"), location: "Accra,Ghana", pay: "$3,000/mth", label: "Software Engineering", miniLabel: "Beats", },
-	{ key: '3', imageUrl: require("../assets/Images/google.png"),  location: "Accra,Ghana", pay: "$3,000/mth", label: "Software ", miniLabel: "Google", },
+	{ key: '1', imageUrl: require("../assets/Images/burgerKing.png"), location: "Accra,Ghana", pay: "$3,000/mth", label: "Registry Personnel", miniLabel: "Burger King", },
+	{ key: '2', imageUrl: require("../assets/Images/beats.png"), location: "Accra,Ghana", pay: "$3,000/mth", label: "Audio Engineering", miniLabel: "Beats", },
+	{ key: '3', imageUrl: require("../assets/Images/google.png"),  location: "Accra,Ghana", pay: "$3,000/mth", label: "Data Analyst ", miniLabel: "Google", },
 	{ key: '4', imageUrl: require("../assets/Images/apple.png"), location: "Accra,Ghana", pay: "$3,000/mth", label: "Software Engineering", miniLabel: "Apple",  },
-	{ key: '5', imageUrl: require("../assets/Images/facebook.png"), location: "Accra,Ghana", pay: "$3,000/mth", label: "Software Engineering", miniLabel: "Facebook", },
-	{ key: '6', imageUrl: require("../assets/Images/apple.png"), location: "Accra,Ghana", pay: "$3,000/mth", label: "Software Engineering", miniLabel: "Apple", },
-	{ key: '7', imageUrl: require("../assets/Images/google.png"),  location: "Accra,Ghana", pay: "$3,000/mth", label: "Software Engineering", miniLabel: "Google", },
-	{ key: '8', imageUrl: require("../assets/Images/facebook.png"), location: "Accra,Ghana", pay: "$3,000/mth", label: "Software Engineering", miniLabel: "Facebook", },
+	{ key: '5', imageUrl: require("../assets/Images/facebook.png"), location: "Accra,Ghana", pay: "$3,000/mth", label: "AI Engineering", miniLabel: "Facebook", },
+	{ key: '6', imageUrl: require("../assets/Images/starbucks.png"), location: "Accra,Ghana", pay: "$3,000/mth", label: "Bartender", miniLabel: "Starbucks", },
+	{ key: '7', imageUrl: require("../assets/Images/google.png"),  location: "Accra,Ghana", pay: "$3,000/mth", label: "Data Scientist", miniLabel: "Google", },
+	{ key: '8', imageUrl: require("../assets/Images/shell.png"), location: "Accra,Ghana", pay: "$3,000/mth", label: "Petroleum Engineering", miniLabel: "Shell", },
   ];
 
 
@@ -51,7 +51,7 @@ const Homepage = ( { route }) => {
 			<Text style={{margin: 1, marginLeft: 30, marginRight: 40, fontWeight: 'ultralight', fontSize: 15,}}> {email} </Text>
 		</View>
 
-		<Image source={Profile} style={{height: 50, width: 50, margin: 10, marginLeft: 90, marginTop: 15,}} />
+		<Image source={Profile} style={{right: 20,position: 'absolute', height: 50, width: 50, margin: 10, marginLeft: 90, marginTop: 15,}} />
 	</View>
 
 	<View style={{flexDirection: 'row', marginBottom: 10,}}>
@@ -66,17 +66,14 @@ const Homepage = ( { route }) => {
 			<Image source={Filter} style={{ height: 40, width: 40, marginTop: 10, backgroundColor: '#F2F2F3', borderRadius: 8, padding: 10, marginLeft: 14, margin: 4}} />
 		</Pressable>
 		
-
+	</View>
 </View>
-	   
-	
-    </View>
 
 		<View style={{flexDirection: 'row'}}>
 
-<Text style={{margin: 20, marginLeft: 40, fontWeight: 'bold', fontSize: 20,}}>
-			Featured Jobs
-		  </Text>
+			<Text style={{margin: 20, marginLeft: 40, fontWeight: 'bold', fontSize: 20,}}>
+				Featured Jobs
+	    	</Text>
 
 			<Text style={{margin: 20, marginLeft: 140, marginTop: 30, fontWeight: 'ultralight', fontSize: 10,}}>
 				See all
@@ -104,17 +101,17 @@ const Homepage = ( { route }) => {
           showsHorizontalScrollIndicator={false}
         />
 
-					<View style={{flexDirection: 'row'}}>
+	<View style={{flexDirection: 'row'}}>
 
-<Text style={{margin: 20, marginLeft: 40, fontWeight: 'bold', fontSize: 20,}}>
+		<Text style={{margin: 20, marginLeft: 40, fontWeight: 'bold', fontSize: 20,}}>
 			Popular Jobs
-		  </Text>
+		</Text>
 
-			<Text style={{margin: 20, marginLeft: 140, marginTop: 30, fontWeight: 'ultralight', fontSize: 10,}}>
-				See all
-			</Text>
+		<Text style={{margin: 20, marginLeft: 140, marginTop: 30, fontWeight: 'ultralight', fontSize: 10,}}>
+			See all
+		</Text>
 
-					</View>
+	</View>
 
 		  
 

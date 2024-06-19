@@ -5,10 +5,12 @@ const FeaturedJobCard = ({ imageUrl, textColour, imageAlt, bgColour, label, mini
   return (
     <>
     <View style={[styles.container, {backgroundColor: bgColour}]}>
-        <Image 
-        source={imageUrl} 
-        alt={imageAlt} 
-        style={styles.logo} />
+        <View>
+          <Image 
+          source={imageUrl} 
+          alt={imageAlt} 
+          style={styles.logo} />
+        </View>
         <Text style={[styles.label, {color: textColour}]}>{label}</Text>        
         <Text style={[styles.miniLabel, {color: textColour}]}>{miniLabel}</Text>
         <Text style={[styles.location, {color: textColour}]}>{location}</Text>
@@ -36,7 +38,7 @@ const styles = StyleSheet.create({
       left: 60,
       marginLeft: 10,
       paddingHorizontal: 5,
-      paddingVertical: 2,
+      paddingVertical: 3,
       borderRadius: 3,
       fontSize: 14,
       fontWeight: 'bold',      
@@ -64,11 +66,12 @@ const styles = StyleSheet.create({
 
     logo: {
       position: 'relative',
-      top: 22,
+      top: 25,
       left: 20,
       width: 35,
       height: 35,
       padding: 15,
+      marginBottom: 3,
       paddingBottom: 20,
       borderRadius: 15,
       backgroundColor: 'white',

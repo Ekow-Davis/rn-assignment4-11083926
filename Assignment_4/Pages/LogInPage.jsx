@@ -25,7 +25,7 @@ const LogInPage = ( { navigation }) => {
     <StatusBar style="auto"/>
     <ScrollView>
 {/*Code body*/}
-    <View style={{marginBottom: 10, marginTop: 30,}}>
+    <View style={{marginBottom: 15, marginTop: 30,}}>
       <View>
 			<Text style={{marginLeft:16, fontSize: 32, margin: 10, fontWeight: 'bold', color: '#356899'}} >Jobizz</Text>
 
@@ -34,7 +34,7 @@ const LogInPage = ( { navigation }) => {
 				<Text style={{ marginLeft:16, margin: 4, marginBottom: 46, fontSize: 18, opacity: 0.5, color: '#0D0D26' }}> Let’s log in. Apply to jobs!</Text>
 			</View>
 
-			<View>
+			<View style={{ marginBottom: 25,}}>
 
 			<SignInputBox 
     		placeholder="Name"

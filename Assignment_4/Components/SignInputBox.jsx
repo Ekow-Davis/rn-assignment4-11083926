@@ -19,10 +19,10 @@ const SignInputBox = ({ placeholder, onInputChange, required }) => {
       placeholderTextColor='#999'
       onChangeText={handleChange}
       value={input}
-      style={{backgroundColor: "#ffffff", width: 350, height: 52, borderRadius: 10, padding: 1, paddingLeft: 10, borderWidth: 1,  margin: 4, marginLeft: 20, borderColor: '#AFB0B6',}}
+      style={{backgroundColor: "#ffffff", width: 350, height: 52, borderRadius: 10, padding: 1, paddingLeft: 10, borderWidth: 1,  margin: 4, marginLeft: 20, marginBottom: 15, borderColor: '#AFB0B6',}}
       />
 
-{required && !input && <Text style={styles.errorText}>This field is required</Text>}
+
     </View>
     </>
   )
