@@ -3,6 +3,20 @@ Assignment 4 for DCIT 202
 
 ID: 11083926
 
+## Screenshot
+![screenshot](https://github.com/Ekow-Davis/rn-assignment4-11083926/assets/152081404/41178c32-49e9-429f-97e7-4247fbc91cef)
+
+![screenshot](https://github.com/Ekow-Davis/rn-assignment4-11083926/assets/152081404/b53f8157-7a8e-47dd-b255-8e5573c718da)
+
+![screenshot](https://github.com/Ekow-Davis/rn-assignment4-11083926/assets/152081404/e7bb3952-32ef-4b22-82b3-3ef9f7095174)
+
+![screenshot](https://github.com/Ekow-Davis/rn-assignment4-11083926/assets/152081404/6681e960-efde-4517-9d00-573a0eb7eeaf)
+
+![screenshot](https://github.com/Ekow-Davis/rn-assignment4-11083926/assets/152081404/deffa9e0-364e-4e15-a6fb-eca06b183772)
+
+![screenshot](https://github.com/Ekow-Davis/rn-assignment4-11083926/assets/152081404/35d06542-a184-4d8b-969e-2df10399396a)
+
+
 ## Components Used
 So the components used in this system are:
 
